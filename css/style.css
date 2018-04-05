@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+
+/* basic stylings ------------------------------------------ */
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html, body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.holder {
+  height: 100vh;
+  background-image: url('../images/background-images/image1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 24, 30, 0.5);
+}
+
+.box {
+  width: 600px;
+  background-color: rgba(36, 36, 36, 0.5);
+  padding: 50px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 20px 16px rgba(0, 0, 0, 0.22);
+  text-align: center;
+  font-weight: 100;
+  vertical-align: middle;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+img {
+  width: 100px;
+}
+
+h2 small {
+  font-weight: normal;
+  color: #888;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ff9966;
+  text-decoration: none;
+}
+
+/* form starting stylings ------------------------------- */
+
+form {
+  margin: 30px 0;
+  position: relative;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #ff9966;
+  background: transparent;
+  color: #ff9966;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+
+label {
+  color: #ff9966;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+input:focus~label, input:valid~label {
+  top: -20px;
+  font-size: 14px;
+  color: #ff9966;
+}
+
+/* BOTTOM BARS ================================= */
+
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.bar:before, .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #ff9966;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+
+input:focus~.bar:before, input:focus~.bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+
+input:focus~.highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #ff9966;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #ff9966;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #ff9966;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.button-login {
+  display: block;
+}
+
+.primary-btn {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  font-size: 20px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #ff9966;
+  border-radius: 0;
+  color: #ff9966;
+  margin-top: 25px;
+  padding: 12px 25px;
+}
+
+.primary-btn:hover {
+  background-color: #ff9966;
+  color: #fff;
+}
